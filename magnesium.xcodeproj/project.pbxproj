@@ -16,6 +16,9 @@
 		23360E0523539A2800680871 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23360E0323539A2800680871 /* LaunchScreen.storyboard */; };
 		23360E1023539A2800680871 /* magnesiumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23360E0F23539A2800680871 /* magnesiumTests.swift */; };
 		23360E1B23539A2800680871 /* magnesiumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23360E1A23539A2800680871 /* magnesiumUITests.swift */; };
+		23360E2A23539BB200680871 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23360E2923539BB200680871 /* SummaryView.swift */; };
+		23360E2C23539BCF00680871 /* MealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23360E2B23539BCF00680871 /* MealsView.swift */; };
+		23360E2F23539BE900680871 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23360E2E23539BE900680871 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		23360E1623539A2800680871 /* magnesiumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = magnesiumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23360E1A23539A2800680871 /* magnesiumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = magnesiumUITests.swift; sourceTree = "<group>"; };
 		23360E1C23539A2800680871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23360E2923539BB200680871 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		23360E2B23539BCF00680871 /* MealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsView.swift; sourceTree = "<group>"; };
+		23360E2E23539BE900680871 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		23360DF423539A2300680871 /* magnesium */ = {
 			isa = PBXGroup;
 			children = (
+				23360E2823539B9700680871 /* Views */,
 				23360DF523539A2300680871 /* AppDelegate.swift */,
 				23360DF723539A2300680871 /* SceneDelegate.swift */,
 				23360DFC23539A2300680871 /* ContentView.swift */,
@@ -137,6 +144,16 @@
 				23360E1C23539A2800680871 /* Info.plist */,
 			);
 			path = magnesiumUITests;
+			sourceTree = "<group>";
+		};
+		23360E2823539B9700680871 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				23360E2923539BB200680871 /* SummaryView.swift */,
+				23360E2B23539BCF00680871 /* MealsView.swift */,
+				23360E2E23539BE900680871 /* SettingsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,10 +287,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23360E2F23539BE900680871 /* SettingsView.swift in Sources */,
 				23360DF623539A2300680871 /* AppDelegate.swift in Sources */,
 				23360DF823539A2300680871 /* SceneDelegate.swift in Sources */,
+				23360E2A23539BB200680871 /* SummaryView.swift in Sources */,
 				23360DFD23539A2300680871 /* ContentView.swift in Sources */,
 				23360DFB23539A2300680871 /* magnesium.xcdatamodeld in Sources */,
+				23360E2C23539BCF00680871 /* MealsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
