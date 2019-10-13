@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23360DF623539A2300680871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23360DF523539A2300680871 /* AppDelegate.swift */; };
+		23360DF823539A2300680871 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23360DF723539A2300680871 /* SceneDelegate.swift */; };
+		23360DFB23539A2300680871 /* magnesium.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23360DF923539A2300680871 /* magnesium.xcdatamodeld */; };
+		23360DFD23539A2300680871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23360DFC23539A2300680871 /* ContentView.swift */; };
+		23360DFF23539A2800680871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23360DFE23539A2800680871 /* Assets.xcassets */; };
+		23360E0223539A2800680871 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23360E0123539A2800680871 /* Preview Assets.xcassets */; };
+		23360E0523539A2800680871 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23360E0323539A2800680871 /* LaunchScreen.storyboard */; };
+		23360E1023539A2800680871 /* magnesiumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23360E0F23539A2800680871 /* magnesiumTests.swift */; };
+		23360E1B23539A2800680871 /* magnesiumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23360E1A23539A2800680871 /* magnesiumUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		23360E0C23539A2800680871 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23360DEA23539A2300680871 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23360DF123539A2300680871;
+			remoteInfo = magnesium;
+		};
+		23360E1723539A2800680871 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23360DEA23539A2300680871 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23360DF123539A2300680871;
+			remoteInfo = magnesium;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		23360DF223539A2300680871 /* magnesium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = magnesium.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23360DF523539A2300680871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		23360DF723539A2300680871 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		23360DFA23539A2300680871 /* magnesium.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = magnesium.xcdatamodel; sourceTree = "<group>"; };
+		23360DFC23539A2300680871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		23360DFE23539A2800680871 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23360E0123539A2800680871 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		23360E0423539A2800680871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		23360E0623539A2800680871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23360E0B23539A2800680871 /* magnesiumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = magnesiumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23360E0F23539A2800680871 /* magnesiumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = magnesiumTests.swift; sourceTree = "<group>"; };
+		23360E1123539A2800680871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23360E1623539A2800680871 /* magnesiumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = magnesiumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23360E1A23539A2800680871 /* magnesiumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = magnesiumUITests.swift; sourceTree = "<group>"; };
+		23360E1C23539A2800680871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23360DEF23539A2300680871 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23360E0823539A2800680871 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23360E1323539A2800680871 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23360DE923539A2300680871 = {
+			isa = PBXGroup;
+			children = (
+				23360DF423539A2300680871 /* magnesium */,
+				23360E0E23539A2800680871 /* magnesiumTests */,
+				23360E1923539A2800680871 /* magnesiumUITests */,
+				23360DF323539A2300680871 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		23360DF323539A2300680871 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23360DF223539A2300680871 /* magnesium.app */,
+				23360E0B23539A2800680871 /* magnesiumTests.xctest */,
+				23360E1623539A2800680871 /* magnesiumUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23360DF423539A2300680871 /* magnesium */ = {
+			isa = PBXGroup;
+			children = (
+				23360DF523539A2300680871 /* AppDelegate.swift */,
+				23360DF723539A2300680871 /* SceneDelegate.swift */,
+				23360DFC23539A2300680871 /* ContentView.swift */,
+				23360DFE23539A2800680871 /* Assets.xcassets */,
+				23360E0323539A2800680871 /* LaunchScreen.storyboard */,
+				23360E0623539A2800680871 /* Info.plist */,
+				23360DF923539A2300680871 /* magnesium.xcdatamodeld */,
+				23360E0023539A2800680871 /* Preview Content */,
+			);
+			path = magnesium;
+			sourceTree = "<group>";
+		};
+		23360E0023539A2800680871 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				23360E0123539A2800680871 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		23360E0E23539A2800680871 /* magnesiumTests */ = {
+			isa = PBXGroup;
+			children = (
+				23360E0F23539A2800680871 /* magnesiumTests.swift */,
+				23360E1123539A2800680871 /* Info.plist */,
+			);
+			path = magnesiumTests;
+			sourceTree = "<group>";
+		};
+		23360E1923539A2800680871 /* magnesiumUITests */ = {
+			isa = PBXGroup;
+			children = (
+				23360E1A23539A2800680871 /* magnesiumUITests.swift */,
+				23360E1C23539A2800680871 /* Info.plist */,
+			);
+			path = magnesiumUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23360DF123539A2300680871 /* magnesium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23360E1F23539A2800680871 /* Build configuration list for PBXNativeTarget "magnesium" */;
+			buildPhases = (
+				23360DEE23539A2300680871 /* Sources */,
+				23360DEF23539A2300680871 /* Frameworks */,
+				23360DF023539A2300680871 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = magnesium;
+			productName = magnesium;
+			productReference = 23360DF223539A2300680871 /* magnesium.app */;
+			productType = "com.apple.product-type.application";
+		};
+		23360E0A23539A2800680871 /* magnesiumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23360E2223539A2800680871 /* Build configuration list for PBXNativeTarget "magnesiumTests" */;
+			buildPhases = (
+				23360E0723539A2800680871 /* Sources */,
+				23360E0823539A2800680871 /* Frameworks */,
+				23360E0923539A2800680871 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23360E0D23539A2800680871 /* PBXTargetDependency */,
+			);
+			name = magnesiumTests;
+			productName = magnesiumTests;
+			productReference = 23360E0B23539A2800680871 /* magnesiumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		23360E1523539A2800680871 /* magnesiumUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23360E2523539A2800680871 /* Build configuration list for PBXNativeTarget "magnesiumUITests" */;
+			buildPhases = (
+				23360E1223539A2800680871 /* Sources */,
+				23360E1323539A2800680871 /* Frameworks */,
+				23360E1423539A2800680871 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23360E1823539A2800680871 /* PBXTargetDependency */,
+			);
+			name = magnesiumUITests;
+			productName = magnesiumUITests;
+			productReference = 23360E1623539A2800680871 /* magnesiumUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23360DEA23539A2300680871 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "James Saeed";
+				TargetAttributes = {
+					23360DF123539A2300680871 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					23360E0A23539A2800680871 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 23360DF123539A2300680871;
+					};
+					23360E1523539A2800680871 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 23360DF123539A2300680871;
+					};
+				};
+			};
+			buildConfigurationList = 23360DED23539A2300680871 /* Build configuration list for PBXProject "magnesium" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 23360DE923539A2300680871;
+			productRefGroup = 23360DF323539A2300680871 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23360DF123539A2300680871 /* magnesium */,
+				23360E0A23539A2800680871 /* magnesiumTests */,
+				23360E1523539A2800680871 /* magnesiumUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23360DF023539A2300680871 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23360E0523539A2800680871 /* LaunchScreen.storyboard in Resources */,
+				23360E0223539A2800680871 /* Preview Assets.xcassets in Resources */,
+				23360DFF23539A2800680871 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23360E0923539A2800680871 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23360E1423539A2800680871 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23360DEE23539A2300680871 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23360DF623539A2300680871 /* AppDelegate.swift in Sources */,
+				23360DF823539A2300680871 /* SceneDelegate.swift in Sources */,
+				23360DFD23539A2300680871 /* ContentView.swift in Sources */,
+				23360DFB23539A2300680871 /* magnesium.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23360E0723539A2800680871 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23360E1023539A2800680871 /* magnesiumTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23360E1223539A2800680871 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23360E1B23539A2800680871 /* magnesiumUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23360E0D23539A2800680871 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23360DF123539A2300680871 /* magnesium */;
+			targetProxy = 23360E0C23539A2800680871 /* PBXContainerItemProxy */;
+		};
+		23360E1823539A2800680871 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23360DF123539A2300680871 /* magnesium */;
+			targetProxy = 23360E1723539A2800680871 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		23360E0323539A2800680871 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23360E0423539A2800680871 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		23360E1D23539A2800680871 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		23360E1E23539A2800680871 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		23360E2023539A2800680871 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"magnesium/Preview Content\"";
+				DEVELOPMENT_TEAM = 577WSH643L;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = magnesium/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jtsaeed.magnesium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		23360E2123539A2800680871 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"magnesium/Preview Content\"";
+				DEVELOPMENT_TEAM = 577WSH643L;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = magnesium/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jtsaeed.magnesium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		23360E2323539A2800680871 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 577WSH643L;
+				INFOPLIST_FILE = magnesiumTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jtsaeed.magnesiumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/magnesium.app/magnesium";
+			};
+			name = Debug;
+		};
+		23360E2423539A2800680871 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 577WSH643L;
+				INFOPLIST_FILE = magnesiumTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jtsaeed.magnesiumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/magnesium.app/magnesium";
+			};
+			name = Release;
+		};
+		23360E2623539A2800680871 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 577WSH643L;
+				INFOPLIST_FILE = magnesiumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jtsaeed.magnesiumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = magnesium;
+			};
+			name = Debug;
+		};
+		23360E2723539A2800680871 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 577WSH643L;
+				INFOPLIST_FILE = magnesiumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jtsaeed.magnesiumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = magnesium;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23360DED23539A2300680871 /* Build configuration list for PBXProject "magnesium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23360E1D23539A2800680871 /* Debug */,
+				23360E1E23539A2800680871 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23360E1F23539A2800680871 /* Build configuration list for PBXNativeTarget "magnesium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23360E2023539A2800680871 /* Debug */,
+				23360E2123539A2800680871 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23360E2223539A2800680871 /* Build configuration list for PBXNativeTarget "magnesiumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23360E2323539A2800680871 /* Debug */,
+				23360E2423539A2800680871 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23360E2523539A2800680871 /* Build configuration list for PBXNativeTarget "magnesiumUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23360E2623539A2800680871 /* Debug */,
+				23360E2723539A2800680871 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		23360DF923539A2300680871 /* magnesium.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				23360DFA23539A2300680871 /* magnesium.xcdatamodel */,
+			);
+			currentVersion = 23360DFA23539A2300680871 /* magnesium.xcdatamodel */;
+			path = magnesium.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 23360DEA23539A2300680871 /* Project object */;
+}
