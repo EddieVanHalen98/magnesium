@@ -11,6 +11,17 @@ import SwiftUI
 struct SummaryView: View {
     
     var body: some View {
-        Text("Summary")
+        NavigationView {
+            ZStack {
+                Color("background").edgesIgnoringSafeArea(.all)
+                List {
+                    MacroCard(title: "Calories", color: Color("orange"), current: 2425, goal: 3456, units: "kcal")
+                    MacroCard(title: "Carbs", color: Color("orange"), current: 2425, goal: 3456, units: "kcal")
+                    MacroCard(title: "Protein", color: Color("orange"), current: 2425, goal: 3456, units: "kcal")
+                    MacroCard(title: "Fat", color: Color("orange"), current: 2425, goal: 3456, units: "kcal")
+                }
+            }
+            .navigationBarTitle("Summary")
+        }
     }
 }

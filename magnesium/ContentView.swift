@@ -11,17 +11,17 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            Text("Summary")
+            SummaryView()
                 .tabItem {
                     Image(systemName: "square.stack.3d.up")
                     Text("Summary")
                 }
-            Text("Meals")
+            MealsView()
                 .tabItem {
                     Image(systemName: "square.stack.3d.up")
                     Text("Meals")
                 }
-            Text("Settings")
+            SettingsView()
                 .tabItem {
                     Image(systemName: "square.stack.3d.up")
                     Text("Settings")
