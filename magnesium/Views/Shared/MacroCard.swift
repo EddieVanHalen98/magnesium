@@ -26,7 +26,7 @@ struct MacroCard: View {
             }
             .padding(.leading, 20)
         }
-        .padding(.horizontal, 16)
+        .padding(.horizontal, 8)
     }
 }
 
@@ -39,7 +39,7 @@ struct Card: View {
     }
 }
 
-struct MacroTitle: View {
+private struct MacroTitle: View {
     
     let title: String
     let color: Color
@@ -48,11 +48,11 @@ struct MacroTitle: View {
         Text(title)
             .font(.system(size: 14, weight: .semibold, design: .default))
             .foregroundColor(color)
-            .padding(.bottom, 4)
+            .padding(.bottom, 6)
     }
 }
 
-struct MacroDetails: View {
+private struct MacroDetails: View {
     
     let current: Double
     let goal: Double
@@ -70,14 +70,14 @@ struct MacroDetails: View {
     }
 }
 
-struct MacroLabel: View {
+private struct MacroLabel: View {
     
     let amount: Double
     let units: String
     
     var body: some View {
         HStack(alignment: .bottom, spacing: 4) {
-            Text("\(amount)")
+            Text("\(Int(amount))")
                 .font(.system(size: 26, weight: .semibold, design: .rounded))
             Text(units)
                 .font(.system(size: 14, weight: .semibold, design: .rounded))
@@ -86,7 +86,7 @@ struct MacroLabel: View {
     }
 }
 
-struct MacroBar: View {
+private struct MacroBar: View {
     
     let current: Double
     let goal: Double

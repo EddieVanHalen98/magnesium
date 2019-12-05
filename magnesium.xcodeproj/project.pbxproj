@@ -20,6 +20,10 @@
 		23360E2C23539BCF00680871 /* MealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23360E2B23539BCF00680871 /* MealsView.swift */; };
 		23360E2F23539BE900680871 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23360E2E23539BE900680871 /* SettingsView.swift */; };
 		23360E3123539F2C00680871 /* MacroCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23360E3023539F2C00680871 /* MacroCard.swift */; };
+		7A1B4A4A2397F81000441ACA /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B4A492397F81000441ACA /* Double+Ext.swift */; };
+		7A1B4A4F2397F97500441ACA /* DataGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B4A4E2397F97500441ACA /* DataGateway.swift */; };
+		7A1B4A512397FA9800441ACA /* MacroSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B4A502397FA9800441ACA /* MacroSet.swift */; };
+		7A1B4A532397FBBF00441ACA /* NSManagedObjectContext+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B4A522397FBBF00441ACA /* NSManagedObjectContext+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		23360E2B23539BCF00680871 /* MealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsView.swift; sourceTree = "<group>"; };
 		23360E2E23539BE900680871 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		23360E3023539F2C00680871 /* MacroCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroCard.swift; sourceTree = "<group>"; };
+		7A1B4A492397F81000441ACA /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
+		7A1B4A4E2397F97500441ACA /* DataGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGateway.swift; sourceTree = "<group>"; };
+		7A1B4A502397FA9800441ACA /* MacroSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroSet.swift; sourceTree = "<group>"; };
+		7A1B4A522397FBBF00441ACA /* NSManagedObjectContext+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				23360E2823539B9700680871 /* Views */,
+				7A1B4A472397F6EC00441ACA /* Model */,
+				7A1B4A462397F64300441ACA /* Service */,
+				7A1B4A482397F6F500441ACA /* Extensions */,
 				23360DF523539A2300680871 /* AppDelegate.swift */,
 				23360DF723539A2300680871 /* SceneDelegate.swift */,
 				23360DFC23539A2300680871 /* ContentView.swift */,
@@ -154,9 +165,42 @@
 				23360E2923539BB200680871 /* SummaryView.swift */,
 				23360E2B23539BCF00680871 /* MealsView.swift */,
 				23360E2E23539BE900680871 /* SettingsView.swift */,
-				23360E3023539F2C00680871 /* MacroCard.swift */,
+				7A1B4A4B2397F83E00441ACA /* Shared */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7A1B4A462397F64300441ACA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7A1B4A4E2397F97500441ACA /* DataGateway.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7A1B4A472397F6EC00441ACA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A1B4A502397FA9800441ACA /* MacroSet.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7A1B4A482397F6F500441ACA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7A1B4A492397F81000441ACA /* Double+Ext.swift */,
+				7A1B4A522397FBBF00441ACA /* NSManagedObjectContext+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7A1B4A4B2397F83E00441ACA /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				23360E3023539F2C00680871 /* MacroCard.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,10 +338,14 @@
 				23360DF623539A2300680871 /* AppDelegate.swift in Sources */,
 				23360DF823539A2300680871 /* SceneDelegate.swift in Sources */,
 				23360E2A23539BB200680871 /* SummaryView.swift in Sources */,
+				7A1B4A512397FA9800441ACA /* MacroSet.swift in Sources */,
 				23360DFD23539A2300680871 /* ContentView.swift in Sources */,
+				7A1B4A532397FBBF00441ACA /* NSManagedObjectContext+Ext.swift in Sources */,
 				23360DFB23539A2300680871 /* magnesium.xcdatamodeld in Sources */,
+				7A1B4A4F2397F97500441ACA /* DataGateway.swift in Sources */,
 				23360E3123539F2C00680871 /* MacroCard.swift in Sources */,
 				23360E2C23539BCF00680871 /* MealsView.swift in Sources */,
+				7A1B4A4A2397F81000441ACA /* Double+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

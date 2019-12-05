@@ -10,17 +10,18 @@ import SwiftUI
 
 struct SummaryView: View {
     
+    @EnvironmentObject var store: UserMacroSetStore
+    
     var body: some View {
         NavigationView {
-            ZStack {
-                Color("background").edgesIgnoringSafeArea(.all)
-                List {
-                    MacroCard(title: "Calories", color: Color("orange"), current: 2425, goal: 3456, units: "kcal")
-                    MacroCard(title: "Carbs", color: Color("orange"), current: 2425, goal: 3456, units: "kcal")
-                    MacroCard(title: "Protein", color: Color("orange"), current: 2425, goal: 3456, units: "kcal")
-                    MacroCard(title: "Fat", color: Color("orange"), current: 2425, goal: 3456, units: "kcal")
-                }
-            }
+            List {
+                MacroCard(title: "Calories", color: Color("orange"), current: 2425, goal: 3456, units: "kcal")
+                MacroCard(title: "Carbs", color: Color("blue"), current: 146, goal: 311, units: "g")
+                MacroCard(title: "Protein", color: Color("pink"), current: 78, goal: 112, units: "g")
+                MacroCard(title: "Fat", color: Color("purple"), current: 72, goal: 89, units: "g")
+            }.onAppear(perform: {
+                self.store.loadStoredUserMacroSets()
+            })
             .navigationBarTitle("Summary")
         }
     }
