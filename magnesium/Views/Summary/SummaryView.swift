@@ -26,10 +26,13 @@ struct SummaryView: View {
                 MacroCard(macroType: .fat, current: currentFat, goal: 89)
             }
             .navigationBarTitle("Summary")
+            .onAppear {
+                self.getCurrentMacros()
+            }
         }
     }
     
-    func getUserMacroSet() {
+    func getCurrentMacros() {
         currentCalories = store.macroSets.map({ $0.macros[.calories] ?? 0 }).reduce(0, { $0 + $1 })
         currentCarbs = store.macroSets.map({ $0.macros[.carbs] ?? 0 }).reduce(0, { $0 + $1 })
         currentProtein = store.macroSets.map({ $0.macros[.protein] ?? 0 }).reduce(0, { $0 + $1 })

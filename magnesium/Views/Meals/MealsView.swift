@@ -21,6 +21,6 @@ struct MealsView: View {
                 MealCard(meal: .snacks)
             }
             .navigationBarTitle("Meals")
-        }
+        }.accentColor(Color("primary"))
     }
 }

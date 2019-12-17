@@ -17,9 +17,11 @@ struct MealCard: View {
     var body: some View {
         ZStack(alignment: .leading) {
             Card()
-            VStack(alignment: .leading) {
-                CardTitle(title: meal.rawValue.capitalized, color: Color("primary"))
-                MealCardLabel(foodTitles: getFoodTitles(for: meal))
+            NavigationLink(destination: MealBreakdownView(mealType: meal)) {
+                VStack(alignment: .leading) {
+                    CardTitle(title: meal.rawValue.capitalized, color: Color("primary"))
+                    MealCardLabel(foodTitles: getFoodTitles(for: meal))
+                }
             }
             .modifier(CardContentPadding())
         }
