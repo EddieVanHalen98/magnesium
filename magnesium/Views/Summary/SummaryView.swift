@@ -20,10 +20,10 @@ struct SummaryView: View {
     var body: some View {
         NavigationView {
             List {
-                MacroCard(title: "Calories", color: Color("orange"), current: currentCalories, goal: 3456, units: "kcal")
-                MacroCard(title: "Carbs", color: Color("blue"), current: currentCarbs, goal: 311, units: "g")
-                MacroCard(title: "Protein", color: Color("pink"), current: currentProtein, goal: 112, units: "g")
-                MacroCard(title: "Fat", color: Color("purple"), current: currentFat, goal: 89, units: "g")
+                MacroCard(macroType: .calories, current: currentCalories, goal: 3456)
+                MacroCard(macroType: .carbs, current: currentCarbs, goal: 311)
+                MacroCard(macroType: .protein, current: currentProtein, goal: 112)
+                MacroCard(macroType: .fat, current: currentFat, goal: 89)
             }
             .navigationBarTitle("Summary")
         }

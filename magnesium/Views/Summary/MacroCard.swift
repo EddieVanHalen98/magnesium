@@ -10,19 +10,17 @@ import SwiftUI
 
 struct MacroCard: View {
     
-    let title: String
-    let color: Color
+    let macroType: MacroType
     let current: Double
     let goal: Double
-    let units: String
     
     var body: some View {
         ZStack(alignment: .leading) {
             Card()
             VStack(alignment: .leading) {
-                CardTitle(title: title, color: color)
-                MacroCardDetails(current: current, goal: goal, units: units, color: color)
-                MacroBar(current: current, goal: goal, color: color)
+                CardTitle(title: macroType.rawValue.capitalized, color: Color(macroType.rawValue))
+                MacroCardDetails(macroType: macroType, current: current, goal: goal)
+                MacroBar(current: current, goal: goal, color: Color(macroType.rawValue))
             }
             .modifier(CardContentPadding())
         }
@@ -32,17 +30,16 @@ struct MacroCard: View {
 
 private struct MacroCardDetails: View {
     
+    let macroType: MacroType
     let current: Double
     let goal: Double
-    let units: String
-    let color: Color
     
     var body: some View {
         HStack(spacing: 12) {
-            MacroCardLabel(amount: current, units: units)
+            MacroCardLabel(amount: current, units: macroType.rawValue.units)
             Text("/").modifier(CardLabelFont())
-                .foregroundColor(color)
-            MacroCardLabel(amount: goal, units: units)
+                .foregroundColor(Color(macroType.rawValue))
+            MacroCardLabel(amount: goal, units: macroType.rawValue.units)
         }
     }
 }

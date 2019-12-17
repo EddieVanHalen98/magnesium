@@ -10,16 +10,17 @@ import SwiftUI
 
 struct MealMacroCard: View {
     
-    let title: String
-    let color: Color
+    let macroType: MacroType
     let macroSets: [MacroSet]
     
     var body: some View {
         ZStack(alignment: .leading) {
             Card()
             VStack(alignment: .leading) {
-                CardTitle(title: title, color: color)
-                // Populate with meal macro card labels
+                CardTitle(title: macroType.rawValue, color: Color(macroType.rawValue))
+                ForEach(macroSets, id: \.self) { macroSet in
+                    MealMacroCardLabel(macroType: self.macroType, foodTitle: macroSet.foodTitle, amount: macroSet.macros[self.macroType]!)
+                }
             }
             .modifier(CardContentPadding())
         }
@@ -29,19 +30,18 @@ struct MealMacroCard: View {
 
 private struct MealMacroCardLabel: View {
     
+    let macroType: MacroType
     let foodTitle: String
     let amount: Double
-    let units: String
-    let color: Color
     
     var body: some View {
         HStack(spacing: 12) {
             HStack(alignment: .bottom, spacing: 4) {
                 Text("\(Int(amount))").modifier(CardLabelFont())
-                Text(units).modifier(CardSubLabelFont())
+                Text(macroType.rawValue.units).modifier(CardSubLabelFont())
             }
             Text("/").modifier(CardLabelFont())
-                .foregroundColor(color)
+                .foregroundColor(Color(macroType.rawValue))
             Text(foodTitle).modifier(CardLabelFont())
         }
     }
