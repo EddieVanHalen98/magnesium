@@ -24,6 +24,10 @@
 		7A1B4A4F2397F97500441ACA /* DataGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B4A4E2397F97500441ACA /* DataGateway.swift */; };
 		7A1B4A512397FA9800441ACA /* MacroSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B4A502397FA9800441ACA /* MacroSet.swift */; };
 		7A1B4A532397FBBF00441ACA /* NSManagedObjectContext+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B4A522397FBBF00441ACA /* NSManagedObjectContext+Ext.swift */; };
+		7A2DCDA023A4F58A00D5B8BB /* MealCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DCD9F23A4F58A00D5B8BB /* MealCard.swift */; };
+		7A2DCDA223A500A300D5B8BB /* MealBreakdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DCDA123A500A300D5B8BB /* MealBreakdownView.swift */; };
+		7A2DCDA423A5010400D5B8BB /* MealMacroCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DCDA323A5010400D5B8BB /* MealMacroCard.swift */; };
+		7AFA03F723A4EE10006F7389 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFA03F623A4EE10006F7389 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		7A1B4A4E2397F97500441ACA /* DataGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGateway.swift; sourceTree = "<group>"; };
 		7A1B4A502397FA9800441ACA /* MacroSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroSet.swift; sourceTree = "<group>"; };
 		7A1B4A522397FBBF00441ACA /* NSManagedObjectContext+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Ext.swift"; sourceTree = "<group>"; };
+		7A2DCD9F23A4F58A00D5B8BB /* MealCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCard.swift; sourceTree = "<group>"; };
+		7A2DCDA123A500A300D5B8BB /* MealBreakdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealBreakdownView.swift; sourceTree = "<group>"; };
+		7A2DCDA323A5010400D5B8BB /* MealMacroCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealMacroCard.swift; sourceTree = "<group>"; };
+		7AFA03F623A4EE10006F7389 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,9 +170,9 @@
 		23360E2823539B9700680871 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				23360E2923539BB200680871 /* SummaryView.swift */,
-				23360E2B23539BCF00680871 /* MealsView.swift */,
-				23360E2E23539BE900680871 /* SettingsView.swift */,
+				7AFA03F823A4EEE0006F7389 /* Summary */,
+				7AFA03F923A4EEE9006F7389 /* Meals */,
+				7AFA03FA23A4EEF3006F7389 /* Settings */,
 				7A1B4A4B2397F83E00441ACA /* Shared */,
 			);
 			path = Views;
@@ -198,9 +206,37 @@
 		7A1B4A4B2397F83E00441ACA /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				23360E3023539F2C00680871 /* MacroCard.swift */,
+				7AFA03F623A4EE10006F7389 /* Card.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		7AFA03F823A4EEE0006F7389 /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				23360E2923539BB200680871 /* SummaryView.swift */,
+				23360E3023539F2C00680871 /* MacroCard.swift */,
+			);
+			path = Summary;
+			sourceTree = "<group>";
+		};
+		7AFA03F923A4EEE9006F7389 /* Meals */ = {
+			isa = PBXGroup;
+			children = (
+				23360E2B23539BCF00680871 /* MealsView.swift */,
+				7A2DCDA123A500A300D5B8BB /* MealBreakdownView.swift */,
+				7A2DCD9F23A4F58A00D5B8BB /* MealCard.swift */,
+				7A2DCDA323A5010400D5B8BB /* MealMacroCard.swift */,
+			);
+			path = Meals;
+			sourceTree = "<group>";
+		};
+		7AFA03FA23A4EEF3006F7389 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				23360E2E23539BE900680871 /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,13 +372,17 @@
 			files = (
 				23360E2F23539BE900680871 /* SettingsView.swift in Sources */,
 				23360DF623539A2300680871 /* AppDelegate.swift in Sources */,
+				7A2DCDA023A4F58A00D5B8BB /* MealCard.swift in Sources */,
 				23360DF823539A2300680871 /* SceneDelegate.swift in Sources */,
 				23360E2A23539BB200680871 /* SummaryView.swift in Sources */,
+				7AFA03F723A4EE10006F7389 /* Card.swift in Sources */,
 				7A1B4A512397FA9800441ACA /* MacroSet.swift in Sources */,
 				23360DFD23539A2300680871 /* ContentView.swift in Sources */,
 				7A1B4A532397FBBF00441ACA /* NSManagedObjectContext+Ext.swift in Sources */,
+				7A2DCDA423A5010400D5B8BB /* MealMacroCard.swift in Sources */,
 				23360DFB23539A2300680871 /* magnesium.xcdatamodeld in Sources */,
 				7A1B4A4F2397F97500441ACA /* DataGateway.swift in Sources */,
+				7A2DCDA223A500A300D5B8BB /* MealBreakdownView.swift in Sources */,
 				23360E3123539F2C00680871 /* MacroCard.swift in Sources */,
 				23360E2C23539BCF00680871 /* MealsView.swift in Sources */,
 				7A1B4A4A2397F81000441ACA /* Double+Ext.swift in Sources */,

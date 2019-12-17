@@ -20,39 +20,17 @@ struct MacroCard: View {
         ZStack(alignment: .leading) {
             Card()
             VStack(alignment: .leading) {
-                MacroTitle(title: title, color: color)
-                MacroDetails(current: current, goal: goal, units: units, color: color)
+                CardTitle(title: title, color: color)
+                MacroCardDetails(current: current, goal: goal, units: units, color: color)
                 MacroBar(current: current, goal: goal, color: color)
             }
-            .padding(.leading, 20)
+            .modifier(CardContentPadding())
         }
-        .padding(.horizontal, 8)
+        .modifier(CardPadding())
     }
 }
 
-struct Card: View {
-    
-    var body: some View {
-        RoundedRectangle(cornerRadius: 12)
-            .foregroundColor(Color.white)
-            .frame(height: 104)
-    }
-}
-
-private struct MacroTitle: View {
-    
-    let title: String
-    let color: Color
-    
-    var body: some View {
-        Text(title)
-            .font(.system(size: 14, weight: .semibold, design: .default))
-            .foregroundColor(color)
-            .padding(.bottom, 6)
-    }
-}
-
-private struct MacroDetails: View {
+private struct MacroCardDetails: View {
     
     let current: Double
     let goal: Double
@@ -61,27 +39,23 @@ private struct MacroDetails: View {
     
     var body: some View {
         HStack(spacing: 12) {
-            MacroLabel(amount: current, units: units)
-            Text("/")
-                .font(.system(size: 26, weight: .semibold, design: .rounded))
+            MacroCardLabel(amount: current, units: units)
+            Text("/").modifier(CardLabelFont())
                 .foregroundColor(color)
-            MacroLabel(amount: goal, units: units)
+            MacroCardLabel(amount: goal, units: units)
         }
     }
 }
 
-private struct MacroLabel: View {
+private struct MacroCardLabel: View {
     
     let amount: Double
     let units: String
     
     var body: some View {
         HStack(alignment: .bottom, spacing: 4) {
-            Text("\(Int(amount))")
-                .font(.system(size: 26, weight: .semibold, design: .rounded))
-            Text(units)
-                .font(.system(size: 14, weight: .semibold, design: .rounded))
-                .opacity(0.5)
+            Text("\(Int(amount))").modifier(CardLabelFont())
+            Text(units).modifier(CardSubLabelFont())
         }
     }
 }

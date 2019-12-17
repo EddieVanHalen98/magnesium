@@ -19,16 +19,28 @@ struct MacroSet: Hashable {
     let fat: Double
 }
 
+enum MealType: String {
+    
+    case breakfast, lunch, dinner, snacks
+}
+
+enum MacroType: String {
+    
+    case calories, carbs, protein, fat
+}
+
 struct UserMacroSet: Hashable {
     
     let identifier: String
     let foodTitle: String
+    let meal: MealType
     let macros: MacroSet
     let dateAdded: Date
     
-    init(for foodTitle: String, with macros: MacroSet) {
+    init(for foodTitle: String, at meal: MealType, with macros: MacroSet) {
         self.identifier = UUID().uuidString
         self.foodTitle = foodTitle
+        self.meal = meal
         self.macros = macros
         self.dateAdded = Date()
     }
@@ -36,6 +48,7 @@ struct UserMacroSet: Hashable {
     init(fromEntity entity: UserMacroSetEntity) {
         self.identifier = entity.identifier!
         self.foodTitle = entity.foodTitle!
+        self.meal = MealType(rawValue: entity.meal!)!
         self.macros = MacroSet(calories: entity.calories,
                                carbs: entity.carbs,
                                protein: entity.protein,
@@ -48,6 +61,7 @@ struct UserMacroSet: Hashable {
         let entity = UserMacroSetEntity(context: context)
         entity.identifier = identifier
         entity.foodTitle = foodTitle
+        entity.meal = meal.rawValue
         
         entity.calories = macros.calories
         entity.carbs = macros.carbs
@@ -64,14 +78,18 @@ class UserMacroSetStore: ObservableObject {
     
     @Published var userMacroSets = [UserMacroSet]()
     
+    init() {
+        loadStoredUserMacroSets()
+    }
+    
     func loadStoredUserMacroSets() {
-        DispatchQueue.global(qos: .userInteractive).async {
+//        DispatchQueue.global(qos: .userInteractive).async {
             let storedUserMacroSets: [UserMacroSet] = DataGateway.shared.getUserMacroSetEntities().map { entity in
                 return UserMacroSet(fromEntity: entity)
             }.filter { userMacroSet in Calendar.current.isDateInToday(userMacroSet.dateAdded) }
             
             DispatchQueue.main.async { self.userMacroSets = storedUserMacroSets }
-        }
+//        }
     }
     
     func addUserMacroSet(_ userMacroSet: UserMacroSet) {
