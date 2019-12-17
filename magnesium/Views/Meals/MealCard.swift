@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MealCard: View {
     
-    @EnvironmentObject var store: UserMacroSetStore
+    @EnvironmentObject var store: MacroSetStore
     
     let meal: MealType
     
@@ -27,8 +27,8 @@ struct MealCard: View {
     }
     
     func getFoodTitles(for meal: MealType) -> [String] {
-        let foodTitles: [String] = store.userMacroSets.filter { $0.meal == meal }.map { userMacroSet in
-            return userMacroSet.foodTitle
+        let foodTitles: [String] = store.macroSets.filter { $0.meal == meal }.map { macroSet in
+            return macroSet.foodTitle
         }
         
         return foodTitles

@@ -10,13 +10,24 @@ import Foundation
 import Combine
 import CoreData
 
-struct MacroSet: Hashable {
+struct Macros: Hashable {
     
     let calories: Double
     
     let carbs: Double
     let protein: Double
     let fat: Double
+    
+    func toDict() -> [MacroType: Double] {
+        var dict = [MacroType: Double]()
+        
+        dict[.calories] = calories
+        dict[.carbs] = carbs
+        dict[.protein] = protein
+        dict[.fat] = fat
+        
+        return dict
+    }
 }
 
 enum MealType: String {
@@ -29,44 +40,44 @@ enum MacroType: String {
     case calories, carbs, protein, fat
 }
 
-struct UserMacroSet: Hashable {
+struct MacroSet: Hashable {
     
     let identifier: String
     let foodTitle: String
     let meal: MealType
-    let macros: MacroSet
+    let macros: [MacroType: Double]
     let dateAdded: Date
     
-    init(for foodTitle: String, at meal: MealType, with macros: MacroSet) {
+    init(for foodTitle: String, at meal: MealType, with macros: Macros) {
         self.identifier = UUID().uuidString
         self.foodTitle = foodTitle
         self.meal = meal
-        self.macros = macros
+        self.macros = macros.toDict()
         self.dateAdded = Date()
     }
     
-    init(fromEntity entity: UserMacroSetEntity) {
+    init(fromEntity entity: MacroSetEntity) {
         self.identifier = entity.identifier!
         self.foodTitle = entity.foodTitle!
         self.meal = MealType(rawValue: entity.meal!)!
-        self.macros = MacroSet(calories: entity.calories,
-                               carbs: entity.carbs,
-                               protein: entity.protein,
-                               fat: entity.fat)
+        self.macros = Macros(calories: entity.calories,
+                             carbs: entity.carbs,
+                             protein: entity.protein,
+                             fat: entity.fat).toDict()
         self.dateAdded = entity.dateAdded!
     }
     
     @discardableResult
-    func getEntity(context: NSManagedObjectContext) -> UserMacroSetEntity {
-        let entity = UserMacroSetEntity(context: context)
+    func getEntity(context: NSManagedObjectContext) -> MacroSetEntity {
+        let entity = MacroSetEntity(context: context)
         entity.identifier = identifier
         entity.foodTitle = foodTitle
         entity.meal = meal.rawValue
         
-        entity.calories = macros.calories
-        entity.carbs = macros.carbs
-        entity.protein = macros.protein
-        entity.fat = macros.fat
+        entity.calories = macros[.calories]!
+        entity.carbs = macros[.carbs]!
+        entity.protein = macros[.protein]!
+        entity.fat = macros[.fat]!
         
         entity.dateAdded = dateAdded
         
@@ -74,26 +85,26 @@ struct UserMacroSet: Hashable {
     }
 }
 
-class UserMacroSetStore: ObservableObject {
+class MacroSetStore: ObservableObject {
     
-    @Published var userMacroSets = [UserMacroSet]()
+    @Published var macroSets = [MacroSet]()
     
     init() {
-        loadStoredUserMacroSets()
+        loadStoredMacroSets()
     }
     
-    func loadStoredUserMacroSets() {
+    func loadStoredMacroSets() {
 //        DispatchQueue.global(qos: .userInteractive).async {
-            let storedUserMacroSets: [UserMacroSet] = DataGateway.shared.getUserMacroSetEntities().map { entity in
-                return UserMacroSet(fromEntity: entity)
-            }.filter { userMacroSet in Calendar.current.isDateInToday(userMacroSet.dateAdded) }
+            let storedMacroSets: [MacroSet] = DataGateway.shared.getMacroSetEntities().map { entity in
+                return MacroSet(fromEntity: entity)
+            }.filter { macroSet in Calendar.current.isDateInToday(macroSet.dateAdded) }
             
-            DispatchQueue.main.async { self.userMacroSets = storedUserMacroSets }
+            DispatchQueue.main.async { self.macroSets = storedMacroSets }
 //        }
     }
     
-    func addUserMacroSet(_ userMacroSet: UserMacroSet) {
-        userMacroSets.append(userMacroSet)
-        DataGateway.shared.saveUserMacroSet(userMacroSet: userMacroSet)
+    func addMacroSet(_ macroSet: MacroSet) {
+        macroSets.append(macroSet)
+        DataGateway.shared.saveMacroSet(macroSet)
     }
 }

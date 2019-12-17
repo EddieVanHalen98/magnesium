@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MealsView: View {
     
-    @EnvironmentObject var store: UserMacroSetStore
+    @EnvironmentObject var store: MacroSetStore
     
     var body: some View {
         NavigationView {

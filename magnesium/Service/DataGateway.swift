@@ -24,21 +24,21 @@ class DataGateway {
 
 extension DataGateway {
     
-    func getUserMacroSetEntities() -> [UserMacroSetEntity] {
-        var userMacroSets = [UserMacroSetEntity]()
-        let request: NSFetchRequest<UserMacroSetEntity> = UserMacroSetEntity.fetchRequest()
+    func getMacroSetEntities() -> [MacroSetEntity] {
+        var macroSets = [MacroSetEntity]()
+        let request: NSFetchRequest<MacroSetEntity> = MacroSetEntity.fetchRequest()
         
         do {
-            userMacroSets = try self.managedObjectContext.fetch(request)
+            macroSets = try self.managedObjectContext.fetch(request)
         } catch {
             print("error")
         }
         
-        return userMacroSets
+        return macroSets
     }
     
-    func saveUserMacroSet(userMacroSet: UserMacroSet) {
-        userMacroSet.getEntity(context: self.managedObjectContext)
+    func saveMacroSet(_ macroSet: MacroSet) {
+        macroSet.getEntity(context: self.managedObjectContext)
         
         do {
             try self.managedObjectContext.save()
@@ -47,13 +47,13 @@ extension DataGateway {
         }
     }
     
-    func deleteUserMacroSet(userMacroSet: UserMacroSet) {
-        for entity in getUserMacroSetEntities() {
+    func deleteMacroSet(_ macroSet: MacroSet) {
+        for entity in getMacroSetEntities() {
             guard let identifier = entity.identifier else {
                 continue
             }
             
-            if userMacroSet.identifier == identifier {
+            if macroSet.identifier == identifier {
                 managedObjectContext.delete(entity)
                 
                 do {

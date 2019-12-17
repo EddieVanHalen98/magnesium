@@ -12,7 +12,7 @@ struct MealMacroCard: View {
     
     let title: String
     let color: Color
-    let userMacroSets: [UserMacroSet]
+    let macroSets: [MacroSet]
     
     var body: some View {
         ZStack(alignment: .leading) {

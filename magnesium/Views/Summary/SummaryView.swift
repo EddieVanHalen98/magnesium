@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SummaryView: View {
     
-    @EnvironmentObject var store: UserMacroSetStore
+    @EnvironmentObject var store: MacroSetStore
     
     @State var currentCalories: Double = 0
     @State var currentCarbs: Double = 0
@@ -30,9 +30,9 @@ struct SummaryView: View {
     }
     
     func getUserMacroSet() {
-        currentCalories = store.userMacroSets.map({ $0.macros.calories }).reduce(0, { $0 + $1 })
-        currentCarbs = store.userMacroSets.map({ $0.macros.carbs }).reduce(0, { $0 + $1 })
-        currentProtein = store.userMacroSets.map({ $0.macros.protein }).reduce(0, { $0 + $1 })
-        currentFat = store.userMacroSets.map({ $0.macros.fat }).reduce(0, { $0 + $1 })
+        currentCalories = store.macroSets.map({ $0.macros[.calories] ?? 0 }).reduce(0, { $0 + $1 })
+        currentCarbs = store.macroSets.map({ $0.macros[.carbs] ?? 0 }).reduce(0, { $0 + $1 })
+        currentProtein = store.macroSets.map({ $0.macros[.protein] ?? 0 }).reduce(0, { $0 + $1 })
+        currentFat = store.macroSets.map({ $0.macros[.fat] ?? 0 }).reduce(0, { $0 + $1 })
     }
 }
