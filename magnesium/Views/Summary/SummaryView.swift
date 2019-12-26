@@ -39,3 +39,9 @@ struct SummaryView: View {
         currentFat = store.macroSets.map({ $0.macros[.fat] ?? 0 }).reduce(0, { $0 + $1 })
     }
 }
+
+struct SummaryView_Previews: PreviewProvider {
+    static var previews: some View {
+        SummaryView().previewDevice("iPhone 11 Pro")
+    }
+}

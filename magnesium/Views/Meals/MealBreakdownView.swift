@@ -12,6 +12,8 @@ struct MealBreakdownView: View {
     
     @EnvironmentObject var store: MacroSetStore
     
+    @State var isAddFoodPresented = false
+    
     let mealType: MealType
     
     var body: some View {
@@ -30,9 +32,12 @@ struct MealBreakdownView: View {
         }
         .navigationBarTitle(mealType.rawValue.capitalized)
         .navigationBarItems(trailing: Button(action: {
-            // Add item
+            self.isAddFoodPresented = true
         }, label: {
             Text("Add")
         }))
+        .sheet(isPresented: $isAddFoodPresented) {
+            AddFoodView()
+        }
     }
 }

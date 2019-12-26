@@ -13,20 +13,20 @@ struct ContentView: View {
         TabView {
             SummaryView()
                 .tabItem {
-                    Image(systemName: "square.stack.3d.up")
+                    Image(systemName: "doc.plaintext")
                     Text("Summary")
                 }
             MealsView()
                 .tabItem {
-                    Image(systemName: "square.stack.3d.up")
+                    Image(systemName: "chart.pie")
                     Text("Meals")
                 }
             SettingsView()
                 .tabItem {
-                    Image(systemName: "square.stack.3d.up")
+                    Image(systemName: "gear")
                     Text("Settings")
                 }
-        }
+        }.accentColor(Color("primary"))
     }
 }
 
