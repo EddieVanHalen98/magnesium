@@ -89,18 +89,30 @@ class MacroSetStore: ObservableObject {
     
     @Published var macroSets = [MacroSet]()
     
+    @Published var currentCalories: Double = 0
+    @Published var currentCarbs: Double = 0
+    @Published var currentProtein: Double = 0
+    @Published var currentFat: Double = 0
+    
     init() {
         loadStoredMacroSets()
     }
     
     func loadStoredMacroSets() {
-//        DispatchQueue.global(qos: .userInteractive).async {
-            let storedMacroSets: [MacroSet] = DataGateway.shared.getMacroSetEntities().map { entity in
-                return MacroSet(fromEntity: entity)
-            }.filter { macroSet in Calendar.current.isDateInToday(macroSet.dateAdded) }
-            
-            DispatchQueue.main.async { self.macroSets = storedMacroSets }
-//        }
+        let storedMacroSets: [MacroSet] = DataGateway.shared.getMacroSetEntities().map { entity in
+            return MacroSet(fromEntity: entity)
+        }.filter { macroSet in Calendar.current.isDateInToday(macroSet.dateAdded) }
+        
+        DispatchQueue.main.async { self.macroSets = storedMacroSets }
+    }
+    
+    func updateCurrentMacros() {
+        DispatchQueue.main.async {
+            self.currentCalories = self.macroSets.map({ $0.macros[.calories] ?? 0 }).reduce(0, { $0 + $1 })
+            self.currentCarbs = self.macroSets.map({ $0.macros[.carbs] ?? 0 }).reduce(0, { $0 + $1 })
+            self.currentProtein = self.macroSets.map({ $0.macros[.protein] ?? 0 }).reduce(0, { $0 + $1 })
+            self.currentFat = self.macroSets.map({ $0.macros[.fat] ?? 0 }).reduce(0, { $0 + $1 })
+        }
     }
     
     func addMacroSet(_ macroSet: MacroSet) {

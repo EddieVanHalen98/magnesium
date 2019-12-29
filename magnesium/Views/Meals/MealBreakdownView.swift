@@ -37,7 +37,8 @@ struct MealBreakdownView: View {
             Text("Add")
         }))
         .sheet(isPresented: $isAddFoodPresented) {
-            AddFoodView()
+            AddFoodView(isPresented: self.$isAddFoodPresented)
+                .environmentObject(self.store)
         }
     }
 }

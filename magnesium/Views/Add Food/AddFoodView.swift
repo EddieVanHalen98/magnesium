@@ -10,7 +10,11 @@ import SwiftUI
 
 struct AddFoodView: View {
     
+    @EnvironmentObject var store: MacroSetStore
+    
     @ObservedObject var viewModel = AddFoodViewModel()
+    
+    @Binding var isPresented: Bool
     
     @State var searchQuery = ""
     
@@ -21,7 +25,7 @@ struct AddFoodView: View {
                     self.viewModel.search(query: self.searchQuery)
                 })
                 List(viewModel.searchResults, id: \.self) { foodItem in
-                    NavigationLink(destination: ConfirmAddFoodView(foodItem: foodItem)) {
+                    NavigationLink(destination: ConfirmAddFoodView(isPresented: self.$isPresented, foodItem: foodItem)) {
                         FoodSearchResultView(foodItem: foodItem)
                     }
                 }
@@ -31,11 +35,9 @@ struct AddFoodView: View {
                 // Open Favourites
             }, label: {
                 Text("Favourites")
-            }), trailing: Button(action: {
-                // Open camera
-            }, label: {
+            }), trailing: NavigationLink(destination: ScanFoodView(), label: {
                 Image(systemName: "camera.viewfinder")
-                    .font(.system(size: 24, weight: .light, design: .default))
+                .font(.system(size: 24, weight: .light, design: .default))
             }))
         }.accentColor(Color("primary"))
     }
@@ -57,11 +59,5 @@ private struct FoodSearchResultView: View {
             }
         }.padding(.vertical, 8)
         .padding(.leading, 8)
-    }
-}
-
-struct FoodSearchResultView_Previews: PreviewProvider {
-    static var previews: some View {
-        FoodSearchResultView(foodItem: FoodItem(label: "Egg", nutrients: FoodItemNutrients(calories: 100, protein: 100, carbs: 100, fat: 100), brand: "Your Ma")).previewDevice("iPhone 11 Pro")
     }
 }

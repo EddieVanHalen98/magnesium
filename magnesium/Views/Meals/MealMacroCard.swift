@@ -42,7 +42,7 @@ private struct MealMacroCardLabel: View {
             }
             Text("/").modifier(CardLabelFont())
                 .foregroundColor(Color(macroType.rawValue))
-            Text(foodTitle).modifier(CardLabelFont())
+            Text(foodTitle.lowercased()).modifier(CardLabelFont())
         }
     }
 }

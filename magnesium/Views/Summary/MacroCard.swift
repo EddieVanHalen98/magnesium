@@ -44,7 +44,7 @@ private struct MacroCardDetails: View {
     }
 }
 
-private struct MacroCardLabel: View {
+struct MacroCardLabel: View {
     
     let amount: Double
     let units: String

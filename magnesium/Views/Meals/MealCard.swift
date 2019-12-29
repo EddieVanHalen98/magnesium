@@ -42,7 +42,7 @@ private struct MealCardLabel: View {
     let foodTitles: [String]
     
     var body: some View {
-        Text(foodTitles.isEmpty ? "nothing" : foodTitles.joined(separator: "&")).modifier(CardLabelFont())
+        Text(foodTitles.isEmpty ? "nothing" : foodTitles.joined(separator: "&").lowercased()).modifier(CardLabelFont())
             .opacity(foodTitles.isEmpty ? 0.32 : 1.0)
     }
 }

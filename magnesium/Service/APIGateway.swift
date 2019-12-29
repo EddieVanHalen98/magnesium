@@ -17,8 +17,6 @@ class APIGateway {
     let appKey = "025d1ad807e0dc0cc9402bdb039a1347"
     
     private func get(endpoint: String, completion: @escaping (Data?) -> ()) {
-        print("\(baseURL)\(endpoint)&app_id=\(appId)&app_key=\(appKey)")
-        
         let url = URL(string: "\(baseURL)\(endpoint)&app_id=\(appId)&app_key=\(appKey)")!
         
         URLSession.shared.dataTask(with: url) { data, _, _ in
@@ -37,6 +35,15 @@ extension APIGateway {
                 .filter { $0.nutrients.allExist() }
             
             DispatchQueue.main.async { completion(foodItems) }
+        }
+    }
+    
+    func search(barcode: String, completion: @escaping (FoodItem?) -> ()) {
+        get(endpoint: "/parser?upc=\(barcode)") { data in
+            let jsonFoodItems = try! JSONDecoder().decode(JSONFoodItems.self, from: data!)
+            let foodItem = jsonFoodItems.parsed.first?.foodItem
+            
+            DispatchQueue.main.async { completion(foodItem) }
         }
     }
 }
