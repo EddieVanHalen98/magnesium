@@ -27,6 +27,7 @@ struct ContentView: View {
                     Text("Settings")
                 }
         }.accentColor(Color("primary"))
+        .edgesIgnoringSafeArea(.top)
     }
 }
 

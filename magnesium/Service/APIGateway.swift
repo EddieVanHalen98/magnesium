@@ -16,8 +16,18 @@ class APIGateway {
     let appId = "c0498bb3"
     let appKey = "025d1ad807e0dc0cc9402bdb039a1347"
     
+    let customURL = "http://192.168.86.29:3000"
+    
     private func get(endpoint: String, completion: @escaping (Data?) -> ()) {
         let url = URL(string: "\(baseURL)\(endpoint)&app_id=\(appId)&app_key=\(appKey)")!
+        
+        URLSession.shared.dataTask(with: url) { data, _, _ in
+            completion(data)
+        }.resume()
+    }
+    
+    private func getCustom(endpoint: String, completion: @escaping (Data?) -> ()) {
+        let url = URL(string: "\(customURL)\(endpoint)")!
         
         URLSession.shared.dataTask(with: url) { data, _, _ in
             completion(data)
@@ -39,9 +49,8 @@ extension APIGateway {
     }
     
     func search(barcode: String, completion: @escaping (FoodItem?) -> ()) {
-        get(endpoint: "/parser?upc=\(barcode)") { data in
-            let jsonFoodItems = try! JSONDecoder().decode(JSONFoodItems.self, from: data!)
-            let foodItem = jsonFoodItems.parsed.first?.foodItem
+        getCustom(endpoint: "/\(barcode)") { data in
+            let foodItem = try! JSONDecoder().decode(FoodItem.self, from: data!)
             
             DispatchQueue.main.async { completion(foodItem) }
         }

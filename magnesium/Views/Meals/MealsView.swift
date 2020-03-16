@@ -14,11 +14,14 @@ struct MealsView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                MealCard(meal: .breakfast)
-                MealCard(meal: .lunch)
-                MealCard(meal: .dinner)
-                MealCard(meal: .snacks)
+            ZStack {
+                Color("background").edgesIgnoringSafeArea(.all)
+                ScrollView {
+                    MealCard(meal: .breakfast)
+                    MealCard(meal: .lunch)
+                    MealCard(meal: .dinner)
+                    MealCard(meal: .snacks)
+                }
             }
             .navigationBarTitle("Meals")
         }.accentColor(Color("primary"))

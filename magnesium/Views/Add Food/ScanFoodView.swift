@@ -39,10 +39,10 @@ private struct ScannerDetailView: View {
                 Text(barcodeResult?.label ?? "Nothing to scan")
                     .font(.system(size: 24, weight: .semibold, design: .rounded))
                     .foregroundColor(.black)
-                Button(action: {
-                    // continue
-                }) {
-                    Text("Continue")
+                if barcodeResult != nil {
+                    NavigationLink(destination: ConfirmAddFoodView(isPresented: .constant(true), foodItem: barcodeResult!)) {
+                        Text("Continue").foregroundColor(Color("primary"))
+                    }
                 }
             }.padding(.top, 64)
         }

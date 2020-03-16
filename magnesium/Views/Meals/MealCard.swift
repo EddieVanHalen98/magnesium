@@ -18,14 +18,21 @@ struct MealCard: View {
         ZStack(alignment: .leading) {
             Card()
             NavigationLink(destination: MealBreakdownView(mealType: meal)) {
-                VStack(alignment: .leading) {
-                    CardTitle(title: meal.rawValue.capitalized, color: Color("primary"))
-                    MealCardLabel(foodTitles: getFoodTitles(for: meal))
+                HStack {
+                    VStack(alignment: .leading) {
+                        CardTitle(title: meal.rawValue.capitalized, color: Color("primary"))
+                        MealCardLabel(foodTitles: getFoodTitles(for: meal))
+                    }
+                    Spacer()
+                    Image(systemName: "arrow.right")
+                        .font(.system(size: 20, weight: .semibold, design: .rounded))
+                        .opacity(0.2)
                 }
             }
             .modifier(CardContentPadding())
         }
         .modifier(CardPadding())
+        .accentColor(.black)
     }
     
     func getFoodTitles(for meal: MealType) -> [String] {

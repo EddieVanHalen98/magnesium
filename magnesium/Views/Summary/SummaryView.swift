@@ -14,11 +14,14 @@ struct SummaryView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                MacroCard(macroType: .calories, current: store.currentCalories, goal: 3456)
-                MacroCard(macroType: .carbs, current: store.currentCarbs, goal: 311)
-                MacroCard(macroType: .protein, current: store.currentProtein, goal: 112)
-                MacroCard(macroType: .fat, current: store.currentFat, goal: 89)
+            ZStack {
+                Color("background").edgesIgnoringSafeArea(.all)
+                ScrollView {
+                    MacroCard(macroType: .calories, current: store.currentCalories, goal: 3456)
+                    MacroCard(macroType: .carbs, current: store.currentCarbs, goal: 311)
+                    MacroCard(macroType: .protein, current: store.currentProtein, goal: 112)
+                    MacroCard(macroType: .fat, current: store.currentFat, goal: 89)
+                }
             }
             .navigationBarTitle("Summary")
         }

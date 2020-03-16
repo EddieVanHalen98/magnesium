@@ -46,13 +46,18 @@ struct CardSubLabelFont: ViewModifier {
 struct CardContentPadding: ViewModifier {
     
     func body(content: Content) -> some View {
-        content.padding(16)
+        content
+            .padding(.vertical, 16)
+            .padding(.leading, 20)
+            .padding(.trailing, 24)
     }
 }
 
 struct CardPadding: ViewModifier {
     
     func body(content: Content) -> some View {
-        content.padding(.horizontal, 8)
+        content
+            .padding(.horizontal, 16)
+            .padding(.vertical, 8)
     }
 }

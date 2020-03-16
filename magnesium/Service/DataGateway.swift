@@ -20,6 +20,19 @@ class DataGateway {
     }
 }
 
+// MARK: - User Profile
+
+extension DataGateway {
+    
+    func getUserProfile() {
+        
+    }
+    
+    func saveUserProfile() {
+        
+    }
+}
+
 // MARK: - User Macros
 
 extension DataGateway {

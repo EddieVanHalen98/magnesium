@@ -37,8 +37,10 @@
 		7A47880723B785710095AEC7 /* ScanFoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A47880623B785710095AEC7 /* ScanFoodViewModel.swift */; };
 		7A599DA623A911C200411359 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A599DA523A911C200411359 /* String+Ext.swift */; };
 		7A61A24823B4BE2E007601F2 /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A61A24723B4BE2E007601F2 /* AddFoodView.swift */; };
-		7AE2A04423B79F2000A9362C /* Food101.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2A04323B79F1F00A9362C /* Food101.mlmodel */; };
 		7AFA03F723A4EE10006F7389 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFA03F623A4EE10006F7389 /* Card.swift */; };
+		AB1BA47C24194B790044631E /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1BA47B24194B790044631E /* RegistrationView.swift */; };
+		AB1BA47E241A86840044631E /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1BA47D241A86840044631E /* ActionButton.swift */; };
+		ABDEC7EE2413FF4B001316A8 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDEC7ED2413FF4B001316A8 /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,8 +97,10 @@
 		7A47880623B785710095AEC7 /* ScanFoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanFoodViewModel.swift; sourceTree = "<group>"; };
 		7A599DA523A911C200411359 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		7A61A24723B4BE2E007601F2 /* AddFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
-		7AE2A04323B79F1F00A9362C /* Food101.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Food101.mlmodel; sourceTree = "<group>"; };
 		7AFA03F623A4EE10006F7389 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		AB1BA47B24194B790044631E /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		AB1BA47D241A86840044631E /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		ABDEC7ED2413FF4B001316A8 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				23360DFC23539A2300680871 /* ContentView.swift */,
+				ABDEC7EC2413FF2D001316A8 /* Registration */,
 				7A61A24623B4BE23007601F2 /* Add Food */,
 				7AFA03F823A4EEE0006F7389 /* Summary */,
 				7AFA03F923A4EEE9006F7389 /* Meals */,
@@ -214,9 +219,9 @@
 		7A1B4A472397F6EC00441ACA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7AE2A04323B79F1F00A9362C /* Food101.mlmodel */,
 				7A1B4A502397FA9800441ACA /* Macros.swift */,
 				7A1E869B23B4CBEF00E1BED2 /* FoodItem.swift */,
+				ABDEC7ED2413FF4B001316A8 /* UserProfile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 				7AFA03F623A4EE10006F7389 /* Card.swift */,
 				7A1E869923B4C09100E1BED2 /* SearchBar.swift */,
 				7A1E86A423B4EA3000E1BED2 /* AmountTextField.swift */,
+				AB1BA47D241A86840044631E /* ActionButton.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -286,6 +292,14 @@
 				23360E2E23539BE900680871 /* SettingsView.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		ABDEC7EC2413FF2D001316A8 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				AB1BA47B24194B790044631E /* RegistrationView.swift */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,6 +436,7 @@
 				23360E2F23539BE900680871 /* SettingsView.swift in Sources */,
 				23360DF623539A2300680871 /* AppDelegate.swift in Sources */,
 				7A2DCDA023A4F58A00D5B8BB /* MealCard.swift in Sources */,
+				AB1BA47C24194B790044631E /* RegistrationView.swift in Sources */,
 				7A1E86A523B4EA3000E1BED2 /* AmountTextField.swift in Sources */,
 				7A599DA623A911C200411359 /* String+Ext.swift in Sources */,
 				7A1E86A323B4DD7B00E1BED2 /* ConfirmAddFoodView.swift in Sources */,
@@ -435,9 +450,9 @@
 				23360DFD23539A2300680871 /* ContentView.swift in Sources */,
 				7A1B4A532397FBBF00441ACA /* NSManagedObjectContext+Ext.swift in Sources */,
 				7A2DCDA423A5010400D5B8BB /* MealMacroCard.swift in Sources */,
+				ABDEC7EE2413FF4B001316A8 /* UserProfile.swift in Sources */,
 				7A47880523B76CD50095AEC7 /* ScanFoodView.swift in Sources */,
 				23360DFB23539A2300680871 /* magnesium.xcdatamodeld in Sources */,
-				7AE2A04423B79F2000A9362C /* Food101.mlmodel in Sources */,
 				7A1B4A4F2397F97500441ACA /* DataGateway.swift in Sources */,
 				7A1E86A123B4D2C900E1BED2 /* AddFoodViewModel.swift in Sources */,
 				7A2DCDA223A500A300D5B8BB /* MealBreakdownView.swift in Sources */,
@@ -446,6 +461,7 @@
 				23360E3123539F2C00680871 /* MacroCard.swift in Sources */,
 				23360E2C23539BCF00680871 /* MealsView.swift in Sources */,
 				7A1B4A4A2397F81000441ACA /* Double+Ext.swift in Sources */,
+				AB1BA47E241A86840044631E /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
