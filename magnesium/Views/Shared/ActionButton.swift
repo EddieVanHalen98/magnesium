@@ -6,6 +6,20 @@
 //  Copyright © 2020 James Saeed. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
 
-struct ActionButton
+struct ActionButton: View {
+    
+    let action: () -> Void
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 8)
+                .foregroundColor(.white)
+                .frame(height: 44)
+            Text("Finish")
+                .font(.system(size: 17, weight: .semibold, design: .rounded))
+                .foregroundColor(Color("primary"))
+        }.onTapGesture(perform: action)
+    }
+}

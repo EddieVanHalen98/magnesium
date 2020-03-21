@@ -87,6 +87,8 @@ struct MacroSet: Hashable {
 
 class MacroSetStore: ObservableObject {
     
+    @Published var userProfile: UserProfile
+    
     @Published var macroSets = [MacroSet]()
     
     @Published var currentCalories: Double = 0
@@ -95,6 +97,8 @@ class MacroSetStore: ObservableObject {
     @Published var currentFat: Double = 0
     
     init() {
+        userProfile = UserProfile(fromEntity: DataGateway.shared.getUserProfile()!)
+        
         loadStoredMacroSets()
     }
     

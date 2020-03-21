@@ -40,6 +40,7 @@
 		7AFA03F723A4EE10006F7389 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFA03F623A4EE10006F7389 /* Card.swift */; };
 		AB1BA47C24194B790044631E /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1BA47B24194B790044631E /* RegistrationView.swift */; };
 		AB1BA47E241A86840044631E /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1BA47D241A86840044631E /* ActionButton.swift */; };
+		AB9E80862423D3E900F23302 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E80852423D3E900F23302 /* AppView.swift */; };
 		ABDEC7EE2413FF4B001316A8 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDEC7ED2413FF4B001316A8 /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,7 @@
 		7AFA03F623A4EE10006F7389 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AB1BA47B24194B790044631E /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		AB1BA47D241A86840044631E /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		AB9E80852423D3E900F23302 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		ABDEC7ED2413FF4B001316A8 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				23360DFC23539A2300680871 /* ContentView.swift */,
+				AB9E80852423D3E900F23302 /* AppView.swift */,
 				ABDEC7EC2413FF2D001316A8 /* Registration */,
 				7A61A24623B4BE23007601F2 /* Add Food */,
 				7AFA03F823A4EEE0006F7389 /* Summary */,
@@ -441,6 +444,7 @@
 				7A599DA623A911C200411359 /* String+Ext.swift in Sources */,
 				7A1E86A323B4DD7B00E1BED2 /* ConfirmAddFoodView.swift in Sources */,
 				7A1E869C23B4CBEF00E1BED2 /* FoodItem.swift in Sources */,
+				AB9E80862423D3E900F23302 /* AppView.swift in Sources */,
 				23360DF823539A2300680871 /* SceneDelegate.swift in Sources */,
 				7A1E869E23B4CEB000E1BED2 /* APIGateway.swift in Sources */,
 				23360E2A23539BB200680871 /* SummaryView.swift in Sources */,

@@ -31,11 +31,7 @@ struct AddFoodView: View {
                 }
             }
             .navigationBarTitle("Add Food")
-            .navigationBarItems(leading: Button(action: {
-                // Open Favourites
-            }, label: {
-                Text("Favourites")
-            }), trailing: NavigationLink(destination: ScanFoodView(), label: {
+            .navigationBarItems(trailing: NavigationLink(destination: ScanFoodView(), label: {
                 Image(systemName: "camera.viewfinder")
                 .font(.system(size: 24, weight: .light, design: .default))
             }))

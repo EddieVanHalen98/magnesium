@@ -9,30 +9,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var isRegistered: Bool = false
+    
     var body: some View {
-        TabView {
-            SummaryView()
-                .tabItem {
-                    Image(systemName: "doc.plaintext")
-                    Text("Summary")
-                }
-            MealsView()
-                .tabItem {
-                    Image(systemName: "chart.pie")
-                    Text("Meals")
-                }
-            SettingsView()
-                .tabItem {
-                    Image(systemName: "gear")
-                    Text("Settings")
-                }
-        }.accentColor(Color("primary"))
-        .edgesIgnoringSafeArea(.top)
+        Group {
+            if isRegistered {
+                AppView()
+            } else {
+                RegistrationView(isRegistered: $isRegistered)
+            }
+        }.onAppear {
+            self.isRegistered = DataGateway.shared.getUserProfile() != nil
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        AppView()
     }
 }

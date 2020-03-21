@@ -10,12 +10,14 @@ import SwiftUI
 
 struct RegistrationView: View {
     
+    @Binding var isRegistered: Bool
+    
     @State var sex = "Male"
     @State var age = ""
     @State var height = ""
     @State var weight = ""
     @State var activityLevels = "None"
-    @State var weightGoal = "Lose"
+    @State var goal = "Lose"
     
     var body: some View {
         ZStack {
@@ -26,14 +28,28 @@ struct RegistrationView: View {
                         .font(.system(size: 34, weight: .bold, design: .default))
                     RegistrationPickerField(header: "Sex", options: ["Male", "Female"], selected: $sex)
                     RegistrationTextField(header: "Age", text: $age)
-                    RegistrationTextField(header: "Height", text: $height)
-                    RegistrationTextField(header: "Weight", text: $weight)
+                    RegistrationTextField(header: "Height (cm)", text: $height)
+                    RegistrationTextField(header: "Weight (kg)", text: $weight)
                     RegistrationPickerField(header: "Activity Levels", options: ["None", "Light", "Average", "High", "Extra"], selected: $activityLevels)
-                    RegistrationPickerField(header: "Weight Goal", options: ["Lose", "Maintain", "Gain"], selected: $weightGoal)
+                    RegistrationPickerField(header: "Weight Goal", options: ["Lose", "Maintain", "Gain"], selected: $goal)
+                    ActionButton(action: register)
                 }.padding(.horizontal, 20)
                 .padding(.vertical, 24)
             }
         }
+    }
+    
+    func register() {
+        let userProfile = UserProfile(sex: sex,
+                                      age: Int(age)!,
+                                      height: Double(height)!,
+                                      weight: Double(weight)!,
+                                      activityLevels: activityLevels,
+                                      goal: goal)
+        
+        DataGateway.shared.saveUserProfile(userProfile)
+        
+        isRegistered = true
     }
 }
 
@@ -84,7 +100,7 @@ private struct RegistrationPickerField: View {
 
 struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {
-        RegistrationView()
+        RegistrationView(isRegistered: .constant(false))
             .previewDevice(PreviewDevice(rawValue: "iPhone 11 Pro"))
     }
 }

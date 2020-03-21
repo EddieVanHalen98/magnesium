@@ -24,12 +24,27 @@ class DataGateway {
 
 extension DataGateway {
     
-    func getUserProfile() {
+    func getUserProfile() -> UserProfileEntity? {
+        let request: NSFetchRequest<UserProfileEntity> = UserProfileEntity.fetchRequest()
         
+        do {
+            let userProfiles = try self.managedObjectContext.fetch(request)
+            return userProfiles.first
+        } catch {
+            print("error")
+        }
+        
+        return nil
     }
     
-    func saveUserProfile() {
+    func saveUserProfile(_ userProfile: UserProfile) {
+        userProfile.getEntity(context: self.managedObjectContext)
         
+        do {
+            try self.managedObjectContext.save()
+        } catch {
+            print("error")
+        }
     }
 }
 
