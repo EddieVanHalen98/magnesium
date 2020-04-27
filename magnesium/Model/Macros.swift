@@ -87,7 +87,7 @@ struct MacroSet: Hashable {
 
 class MacroSetStore: ObservableObject {
     
-    @Published var userProfile: UserProfile
+    @Published var userProfile: UserProfile?
     
     @Published var macroSets = [MacroSet]()
     
@@ -96,16 +96,18 @@ class MacroSetStore: ObservableObject {
     @Published var currentProtein: Double = 0
     @Published var currentFat: Double = 0
     
-    init() {
+    func load() {
         userProfile = UserProfile(fromEntity: DataGateway.shared.getUserProfile()!)
         
         loadStoredMacroSets()
+        
+        updateCurrentMacros()
     }
     
     func loadStoredMacroSets() {
-        let storedMacroSets: [MacroSet] = DataGateway.shared.getMacroSetEntities().map { entity in
-            return MacroSet(fromEntity: entity)
-        }.filter { macroSet in Calendar.current.isDateInToday(macroSet.dateAdded) }
+        let storedMacroSets: [MacroSet] = DataGateway.shared.getMacroSetEntities()
+            .map { MacroSet(fromEntity: $0) }
+            .filter { Calendar.current.isDateInToday($0.dateAdded) }
         
         DispatchQueue.main.async { self.macroSets = storedMacroSets }
     }
@@ -120,7 +122,7 @@ class MacroSetStore: ObservableObject {
     }
     
     func addMacroSet(_ macroSet: MacroSet) {
-        macroSets.append(macroSet)
+        DispatchQueue.main.async { self.macroSets.append(macroSet) }
         DataGateway.shared.saveMacroSet(macroSet)
     }
 }

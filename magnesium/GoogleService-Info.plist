@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>536612426320-5pbqq8768qh6h1j1ck5foualnka8n0fj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.536612426320-5pbqq8768qh6h1j1ck5foualnka8n0fj</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB39Q-_i8TaVCta2JVFYvt5G2wPEjT7CfI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>536612426320</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.jtsaeed.magnesium</string>
+	<key>PROJECT_ID</key>
+	<string>magnesium-8b75a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>magnesium-8b75a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:536612426320:ios:0111c14e0f8e373b18b755</string>
+	<key>DATABASE_URL</key>
+	<string>https://magnesium-8b75a.firebaseio.com</string>
+</dict>
+</plist>

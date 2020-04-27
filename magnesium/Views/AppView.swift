@@ -22,12 +22,13 @@ struct AppView: View {
                     Image(systemName: "chart.pie")
                     Text("Meals")
                 }
+            /*
             SettingsView()
                 .tabItem {
                     Image(systemName: "gear")
                     Text("Settings")
                 }
+ */
         }.accentColor(Color("primary"))
-        .edgesIgnoringSafeArea(.top)
     }
 }

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ActionButton: View {
     
+    let title: String
     let action: () -> Void
     
     var body: some View {
@@ -17,7 +18,7 @@ struct ActionButton: View {
             RoundedRectangle(cornerRadius: 8)
                 .foregroundColor(.white)
                 .frame(height: 44)
-            Text("Finish")
+            Text(title)
                 .font(.system(size: 17, weight: .semibold, design: .rounded))
                 .foregroundColor(Color("primary"))
         }.onTapGesture(perform: action)

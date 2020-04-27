@@ -2,8 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSHealthShareUsageDescription</key>
+	<string>To provide more accurate data to the app</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>To share the app&apos;s data to other apps</string>
 	<key>NSCameraUsageDescription</key>
-	<string>I want your camera.</string>
+	<string>To read barcodes of food items</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

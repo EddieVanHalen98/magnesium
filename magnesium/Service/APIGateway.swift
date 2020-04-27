@@ -16,7 +16,7 @@ class APIGateway {
     let appId = "c0498bb3"
     let appKey = "025d1ad807e0dc0cc9402bdb039a1347"
     
-    let customURL = "http://192.168.86.29:3000"
+    let customURL = "http://192.168.0.183:3000"
     
     private func get(endpoint: String, completion: @escaping (Data?) -> ()) {
         let url = URL(string: "\(baseURL)\(endpoint)&app_id=\(appId)&app_key=\(appKey)")!

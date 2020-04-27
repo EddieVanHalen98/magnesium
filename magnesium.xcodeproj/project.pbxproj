@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,10 +38,16 @@
 		7A599DA623A911C200411359 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A599DA523A911C200411359 /* String+Ext.swift */; };
 		7A61A24823B4BE2E007601F2 /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A61A24723B4BE2E007601F2 /* AddFoodView.swift */; };
 		7AFA03F723A4EE10006F7389 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFA03F623A4EE10006F7389 /* Card.swift */; };
+		9A0E6DE7D25F64064FB83534 /* Pods_magnesiumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F69FF3F8294AB32B003702F /* Pods_magnesiumTests.framework */; };
 		AB1BA47C24194B790044631E /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1BA47B24194B790044631E /* RegistrationView.swift */; };
 		AB1BA47E241A86840044631E /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1BA47D241A86840044631E /* ActionButton.swift */; };
+		AB608E7624472B64001CAD24 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB608E7524472B64001CAD24 /* HealthKit.framework */; };
+		AB7CA26324579B020060817D /* AnalyticsGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7CA26224579B020060817D /* AnalyticsGateway.swift */; };
+		AB7CA26524579B4A0060817D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB7CA26424579B4A0060817D /* GoogleService-Info.plist */; };
 		AB9E80862423D3E900F23302 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E80852423D3E900F23302 /* AppView.swift */; };
 		ABDEC7EE2413FF4B001316A8 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDEC7ED2413FF4B001316A8 /* UserProfile.swift */; };
+		BBAA55E4DD7417E1920815CF /* Pods_magnesium_magnesiumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7955888AACC496203662E70 /* Pods_magnesium_magnesiumUITests.framework */; };
+		BFE8867CA9DFF1D28D9A595C /* Pods_magnesium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF17D9C2F88967502C7E1C17 /* Pods_magnesium.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +68,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02D621DE7628D9EECB384D07 /* Pods-magnesium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnesium.release.xcconfig"; path = "Target Support Files/Pods-magnesium/Pods-magnesium.release.xcconfig"; sourceTree = "<group>"; };
+		0B1B5F37DF5876C97AA0D3B0 /* Pods-magnesium-magnesiumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnesium-magnesiumUITests.debug.xcconfig"; path = "Target Support Files/Pods-magnesium-magnesiumUITests/Pods-magnesium-magnesiumUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		23360DF223539A2300680871 /* magnesium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = magnesium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23360DF523539A2300680871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23360DF723539A2300680871 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +89,9 @@
 		23360E2B23539BCF00680871 /* MealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsView.swift; sourceTree = "<group>"; };
 		23360E2E23539BE900680871 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		23360E3023539F2C00680871 /* MacroCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroCard.swift; sourceTree = "<group>"; };
+		2F69FF3F8294AB32B003702F /* Pods_magnesiumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_magnesiumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4063F13665D3B459D3FD9E4E /* Pods-magnesium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnesium.debug.xcconfig"; path = "Target Support Files/Pods-magnesium/Pods-magnesium.debug.xcconfig"; sourceTree = "<group>"; };
+		74CF824ED138E739A3A71E82 /* Pods-magnesiumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnesiumTests.release.xcconfig"; path = "Target Support Files/Pods-magnesiumTests/Pods-magnesiumTests.release.xcconfig"; sourceTree = "<group>"; };
 		7A1B4A492397F81000441ACA /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
 		7A1B4A4E2397F97500441ACA /* DataGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGateway.swift; sourceTree = "<group>"; };
 		7A1B4A502397FA9800441ACA /* Macros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Macros.swift; sourceTree = "<group>"; };
@@ -99,10 +110,18 @@
 		7A599DA523A911C200411359 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		7A61A24723B4BE2E007601F2 /* AddFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
 		7AFA03F623A4EE10006F7389 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		7D9CDE12C25FC5B29A5A0356 /* Pods-magnesium-magnesiumUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnesium-magnesiumUITests.release.xcconfig"; path = "Target Support Files/Pods-magnesium-magnesiumUITests/Pods-magnesium-magnesiumUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AB1BA47B24194B790044631E /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		AB1BA47D241A86840044631E /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		AB608E7324472B64001CAD24 /* magnesium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = magnesium.entitlements; sourceTree = "<group>"; };
+		AB608E7524472B64001CAD24 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		AB7CA26224579B020060817D /* AnalyticsGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsGateway.swift; sourceTree = "<group>"; };
+		AB7CA26424579B4A0060817D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AB9E80852423D3E900F23302 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		ABDEC7ED2413FF4B001316A8 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		D7012702C42F4A55036F9133 /* Pods-magnesiumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnesiumTests.debug.xcconfig"; path = "Target Support Files/Pods-magnesiumTests/Pods-magnesiumTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E7955888AACC496203662E70 /* Pods_magnesium_magnesiumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_magnesium_magnesiumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF17D9C2F88967502C7E1C17 /* Pods_magnesium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_magnesium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +129,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB608E7624472B64001CAD24 /* HealthKit.framework in Frameworks */,
+				BFE8867CA9DFF1D28D9A595C /* Pods_magnesium.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A0E6DE7D25F64064FB83534 /* Pods_magnesiumTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBAA55E4DD7417E1920815CF /* Pods_magnesium_magnesiumUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +160,8 @@
 				23360E0E23539A2800680871 /* magnesiumTests */,
 				23360E1923539A2800680871 /* magnesiumUITests */,
 				23360DF323539A2300680871 /* Products */,
+				AB608E7424472B64001CAD24 /* Frameworks */,
+				E947FDBBDC3144BA3752A904 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +178,7 @@
 		23360DF423539A2300680871 /* magnesium */ = {
 			isa = PBXGroup;
 			children = (
+				AB608E7324472B64001CAD24 /* magnesium.entitlements */,
 				23360E2823539B9700680871 /* Views */,
 				7A1B4A472397F6EC00441ACA /* Model */,
 				7A1E869F23B4D2BB00E1BED2 /* ViewModel */,
@@ -163,6 +189,7 @@
 				23360DFE23539A2800680871 /* Assets.xcassets */,
 				23360E0323539A2800680871 /* LaunchScreen.storyboard */,
 				23360E0623539A2800680871 /* Info.plist */,
+				AB7CA26424579B4A0060817D /* GoogleService-Info.plist */,
 				23360DF923539A2300680871 /* magnesium.xcdatamodeld */,
 				23360E0023539A2800680871 /* Preview Content */,
 			);
@@ -215,6 +242,7 @@
 			children = (
 				7A1B4A4E2397F97500441ACA /* DataGateway.swift */,
 				7A1E869D23B4CEB000E1BED2 /* APIGateway.swift */,
+				AB7CA26224579B020060817D /* AnalyticsGateway.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -297,12 +325,36 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		AB608E7424472B64001CAD24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB608E7524472B64001CAD24 /* HealthKit.framework */,
+				FF17D9C2F88967502C7E1C17 /* Pods_magnesium.framework */,
+				E7955888AACC496203662E70 /* Pods_magnesium_magnesiumUITests.framework */,
+				2F69FF3F8294AB32B003702F /* Pods_magnesiumTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ABDEC7EC2413FF2D001316A8 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
 				AB1BA47B24194B790044631E /* RegistrationView.swift */,
 			);
 			path = Registration;
+			sourceTree = "<group>";
+		};
+		E947FDBBDC3144BA3752A904 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4063F13665D3B459D3FD9E4E /* Pods-magnesium.debug.xcconfig */,
+				02D621DE7628D9EECB384D07 /* Pods-magnesium.release.xcconfig */,
+				0B1B5F37DF5876C97AA0D3B0 /* Pods-magnesium-magnesiumUITests.debug.xcconfig */,
+				7D9CDE12C25FC5B29A5A0356 /* Pods-magnesium-magnesiumUITests.release.xcconfig */,
+				D7012702C42F4A55036F9133 /* Pods-magnesiumTests.debug.xcconfig */,
+				74CF824ED138E739A3A71E82 /* Pods-magnesiumTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,9 +364,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23360E1F23539A2800680871 /* Build configuration list for PBXNativeTarget "magnesium" */;
 			buildPhases = (
+				AC4E6243F72DC508C64DC0E6 /* [CP] Check Pods Manifest.lock */,
 				23360DEE23539A2300680871 /* Sources */,
 				23360DEF23539A2300680871 /* Frameworks */,
 				23360DF023539A2300680871 /* Resources */,
+				66763C96FD6FA7ECBC1ACEF2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -329,6 +383,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23360E2223539A2800680871 /* Build configuration list for PBXNativeTarget "magnesiumTests" */;
 			buildPhases = (
+				08707E3B5ECE35751B987A70 /* [CP] Check Pods Manifest.lock */,
 				23360E0723539A2800680871 /* Sources */,
 				23360E0823539A2800680871 /* Frameworks */,
 				23360E0923539A2800680871 /* Resources */,
@@ -347,9 +402,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23360E2523539A2800680871 /* Build configuration list for PBXNativeTarget "magnesiumUITests" */;
 			buildPhases = (
+				EEE7410C459465AB367B3508 /* [CP] Check Pods Manifest.lock */,
 				23360E1223539A2800680871 /* Sources */,
 				23360E1323539A2800680871 /* Frameworks */,
 				23360E1423539A2800680871 /* Resources */,
+				8CE2DF6FE1A0532B58C3B95B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -410,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23360E0523539A2800680871 /* LaunchScreen.storyboard in Resources */,
+				AB7CA26524579B4A0060817D /* GoogleService-Info.plist in Resources */,
 				23360E0223539A2800680871 /* Preview Assets.xcassets in Resources */,
 				23360DFF23539A2800680871 /* Assets.xcassets in Resources */,
 			);
@@ -431,6 +489,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08707E3B5ECE35751B987A70 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-magnesiumTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66763C96FD6FA7ECBC1ACEF2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-magnesium/Pods-magnesium-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-magnesium/Pods-magnesium-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-magnesium/Pods-magnesium-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CE2DF6FE1A0532B58C3B95B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-magnesium-magnesiumUITests/Pods-magnesium-magnesiumUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-magnesium-magnesiumUITests/Pods-magnesium-magnesiumUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-magnesium-magnesiumUITests/Pods-magnesium-magnesiumUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC4E6243F72DC508C64DC0E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-magnesium-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEE7410C459465AB367B3508 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-magnesium-magnesiumUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		23360DEE23539A2300680871 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -447,6 +608,7 @@
 				AB9E80862423D3E900F23302 /* AppView.swift in Sources */,
 				23360DF823539A2300680871 /* SceneDelegate.swift in Sources */,
 				7A1E869E23B4CEB000E1BED2 /* APIGateway.swift in Sources */,
+				AB7CA26324579B020060817D /* AnalyticsGateway.swift in Sources */,
 				23360E2A23539BB200680871 /* SummaryView.swift in Sources */,
 				7AFA03F723A4EE10006F7389 /* Card.swift in Sources */,
 				7A1B4A512397FA9800441ACA /* Macros.swift in Sources */,
@@ -628,8 +790,10 @@
 		};
 		23360E2023539A2800680871 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4063F13665D3B459D3FD9E4E /* Pods-magnesium.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = magnesium/magnesium.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"magnesium/Preview Content\"";
 				DEVELOPMENT_TEAM = 577WSH643L;
@@ -648,8 +812,10 @@
 		};
 		23360E2123539A2800680871 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02D621DE7628D9EECB384D07 /* Pods-magnesium.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = magnesium/magnesium.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"magnesium/Preview Content\"";
 				DEVELOPMENT_TEAM = 577WSH643L;
@@ -668,6 +834,7 @@
 		};
 		23360E2323539A2800680871 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7012702C42F4A55036F9133 /* Pods-magnesiumTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -690,6 +857,7 @@
 		};
 		23360E2423539A2800680871 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74CF824ED138E739A3A71E82 /* Pods-magnesiumTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -712,6 +880,7 @@
 		};
 		23360E2623539A2800680871 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B1B5F37DF5876C97AA0D3B0 /* Pods-magnesium-magnesiumUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -732,6 +901,7 @@
 		};
 		23360E2723539A2800680871 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D9CDE12C25FC5B29A5A0356 /* Pods-magnesium-magnesiumUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

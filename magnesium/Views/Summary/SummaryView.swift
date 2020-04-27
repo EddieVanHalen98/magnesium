@@ -17,15 +17,14 @@ struct SummaryView: View {
             ZStack {
                 Color("background").edgesIgnoringSafeArea(.all)
                 ScrollView {
-                    MacroCard(macroType: .calories, current: store.currentCalories, goal: store.userProfile.caloriesGoal)
-                    MacroCard(macroType: .carbs, current: store.currentCarbs, goal: store.userProfile.carbsGoal)
-                    MacroCard(macroType: .protein, current: store.currentProtein, goal: store.userProfile.proteinGoal)
-                    MacroCard(macroType: .fat, current: store.currentFat, goal: store.userProfile.fatGoal)
+                    MacroCard(macroType: .calories, current: store.currentCalories, goal: store.userProfile?.caloriesGoal ?? 0)
+                    MacroCard(macroType: .carbs, current: store.currentCarbs, goal: store.userProfile?.carbsGoal ?? 0)
+                    MacroCard(macroType: .protein, current: store.currentProtein, goal: store.userProfile?.proteinGoal ?? 0)
+                    MacroCard(macroType: .fat, current: store.currentFat, goal: store.userProfile?.fatGoal ?? 0)
                 }
             }
             .navigationBarTitle("Summary")
-        }
-        .onAppear {
+        }.onAppear {
             self.store.updateCurrentMacros()
         }
     }

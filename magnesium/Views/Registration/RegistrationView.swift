@@ -7,8 +7,11 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct RegistrationView: View {
+    
+    @EnvironmentObject var store: MacroSetStore
     
     @Binding var isRegistered: Bool
     
@@ -32,9 +35,29 @@ struct RegistrationView: View {
                     RegistrationTextField(header: "Weight (kg)", text: $weight)
                     RegistrationPickerField(header: "Activity Levels", options: ["None", "Light", "Average", "High", "Extra"], selected: $activityLevels)
                     RegistrationPickerField(header: "Weight Goal", options: ["Lose", "Maintain", "Gain"], selected: $goal)
-                    ActionButton(action: register)
+                    ActionButton(title: "Allow Access to HealthKit", action: requestHealthKit)
+                    ActionButton(title: "Finish", action: register)
                 }.padding(.horizontal, 20)
                 .padding(.vertical, 24)
+            }
+        }
+    }
+    
+    func requestHealthKit() {
+        let store = HKHealthStore()
+        
+        let read = Set([HKObjectType.quantityType(forIdentifier: .height)!,
+                        HKObjectType.quantityType(forIdentifier: .bodyMass)!,
+                        HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!])
+        
+        let write = Set([HKObjectType.quantityType(forIdentifier: .dietaryCarbohydrates)!,
+                         HKObjectType.quantityType(forIdentifier: .dietaryEnergyConsumed)!,
+                         HKObjectType.quantityType(forIdentifier: .dietaryFatTotal)!,
+                         HKObjectType.quantityType(forIdentifier: .dietaryProtein)!])
+
+        store.requestAuthorization(toShare: write, read: read) { (_, error) in
+            if let error = error {
+                print(error.localizedDescription)
             }
         }
     }
@@ -48,6 +71,8 @@ struct RegistrationView: View {
                                       goal: goal)
         
         DataGateway.shared.saveUserProfile(userProfile)
+        
+        store.load()
         
         isRegistered = true
     }

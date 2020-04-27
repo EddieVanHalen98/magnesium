@@ -19,13 +19,10 @@ class ScanFoodViewModel: ObservableObject {
     @Published var barcodeResult: FoodItem?
     
     private func search() {
-        print("searching")
         APIGateway.shared.search(barcode: barcode!) { foodItem in
             if let foodItem = foodItem {
-                print("found \(foodItem.label)")
+                self.barcodeResult = foodItem
             }
-            
-            self.barcodeResult = foodItem
         }
     }
 }

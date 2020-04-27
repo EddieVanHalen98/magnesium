@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @EnvironmentObject var store: MacroSetStore
+    
     @State var isRegistered: Bool = false
     
     var body: some View {
@@ -21,6 +23,7 @@ struct ContentView: View {
             }
         }.onAppear {
             self.isRegistered = DataGateway.shared.getUserProfile() != nil
+            if self.isRegistered { self.store.load() }
         }
     }
 }
